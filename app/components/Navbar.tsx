@@ -4,7 +4,11 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { ArrowUpRight } from 'lucide-react';
 
-export default function Navbar({ onBookCall }) {
+export default function Navbar({
+  onBookCall,
+}: {
+  onBookCall: () => void;
+}) {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
