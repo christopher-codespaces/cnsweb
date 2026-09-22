@@ -15,7 +15,7 @@ export default function Hero({ onApply }: HeroProps) {
         {/* Header Tag */}
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-black/30 backdrop-blur-md border border-white/15 text-xs md:text-sm font-medium tracking-wide text-white/90 shadow-lg">
           <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-          For Coaches & Course Creators above $10k per month
+          For Coaches & Course Creators above 10k per month
         </div>
 
         {/* Headline */}
@@ -25,7 +25,7 @@ export default function Hero({ onApply }: HeroProps) {
 
         {/* Subtitle */}
         <p className="text-base sm:text-lg md:text-xl text-white/90 max-w-2xl mx-auto font-normal leading-relaxed">
-          We help creators launch info-products and digital programs that grow past $100k/m by implementing our proven launch, sales, & growth systems.
+          We help creators launch info-products and digital programs that grow past 100k/m by implementing our proven launch, sales, & growth systems.
         </p>
 
         {/* Step 1 Indicator */}

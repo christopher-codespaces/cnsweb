@@ -15,7 +15,6 @@ import {
   Layers, 
   Users, 
   Rocket, 
-  CheckCircle2
 } from 'lucide-react';
 import Image from 'next/image';
 
@@ -259,7 +258,7 @@ const PdfViewer = ({ pdfUrl = "/agency-growth-blueprint.pdf", totalSlides = 33 }
                   Executive Strategy Deck
                 </div>
                 <h2 className="text-xl sm:text-3xl font-extrabold text-neutral-900 leading-tight">
-                  Scaling Digital Info-Products Past $100k/Month
+                  Scaling Digital Info-Products Past 100k/Month
                 </h2>
                 <p className="text-neutral-600 text-xs sm:text-sm leading-relaxed">
                   Slide {currentSlide}: Advanced growth framework, acquisition channels, and conversion systems.
@@ -334,7 +333,7 @@ const Hero = ({ onApply }: { onApply: () => void }) => {
       <div className="max-w-4xl mx-auto space-y-6">
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-black/30 backdrop-blur-md border border-white/15 text-xs md:text-sm font-medium tracking-wide text-white/90 shadow-lg">
           <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-          For Coaches & Course Creators above $10k per month
+          For Coaches & Course Creators above 10k per month
         </div>
 
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-[1.15] text-white">
@@ -342,7 +341,7 @@ const Hero = ({ onApply }: { onApply: () => void }) => {
         </h1>
 
         <p className="text-base sm:text-lg md:text-xl text-white/90 max-w-2xl mx-auto font-normal leading-relaxed">
-          We help creators launch info-products and digital programs that grow past $100k/m by implementing our proven launch, sales, & growth systems.
+          We help creators launch info-products and digital programs that grow past 100k/m by implementing our proven launch, sales, & growth systems.
         </p>
 
         <div className="pt-8 pb-3">
@@ -380,9 +379,9 @@ const Hero = ({ onApply }: { onApply: () => void }) => {
 /* Stats Metric Section */
 const Stats = ({ onSpeak }: { onSpeak: () => void }) => {
   const statsData = [
-    { value: "R300K+", label: "In Total Client Revenue", icon: TrendingUp },
+    { value: "300K+", label: "In Total Client Revenue", icon: TrendingUp },
     { value: "57%", label: "Average Increase In Revenue", icon: BarChart3 },
-    { value: "R300", label: "In Monthly Ad Spend", icon: Layers },
+    { value: "300", label: "In Monthly Ad Spend", icon: Layers },
     { value: "10+", label: "Active Enterprise Clients", icon: Users },
   ];
 
@@ -531,7 +530,7 @@ const CtaSection = ({ onApply }: { onApply: () => void }) => {
           </h2>
 
           <p className="text-white/80 text-sm sm:text-base max-w-lg mx-auto">
-            Ready to scale your info-product revenue beyond $100k/month? Book your application call today.
+            Ready to scale your info-product revenue beyond 100k/month? Book your application call today.
           </p>
 
           <div className="pt-4">

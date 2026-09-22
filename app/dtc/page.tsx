@@ -3,17 +3,14 @@
 import React, { useState, useEffect } from 'react';
 import { 
   ArrowUpRight, 
-  TrendingUp, 
-  BarChart3, 
   ShoppingBag, 
-  Users, 
   Zap, 
   CheckCircle2, 
   Target, 
   Repeat, 
-  Layers 
 } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const TYPEFORM_URL = "https://yourtypeformlink.typeform.com/to/yourformid";
 
@@ -61,7 +58,7 @@ const Navbar = ({ onBookCall }: { onBookCall: () => void }) => {
       scrolled ? 'bg-black/50 backdrop-blur-md py-4 shadow-xl border-b border-white/10' : 'bg-transparent py-6'
     }`}>
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
-        <a href="/" className="flex items-center gap-3 group">
+        <Link href="/" className="flex items-center gap-3 group">
           <div className="w-10 h-10 rounded-xl bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white shadow-inner overflow-hidden p-2 group-hover:border-white/40 transition">
             <Image 
               src="/v3.png" 
@@ -74,7 +71,7 @@ const Navbar = ({ onBookCall }: { onBookCall: () => void }) => {
           <span className="font-bold text-xl tracking-tight text-white flex items-center gap-1">
             Cape Neto<span className="opacity-80 font-normal">Solutions</span>
           </span>
-        </a>
+        </Link>
 
         <nav className="hidden md:flex items-center gap-8 bg-black/20 backdrop-blur-md px-6 py-2 rounded-full border border-white/10">
           {navLinks.map((link) => (
@@ -154,7 +151,7 @@ const DtcHero = ({ onApply }: { onApply: () => void }) => {
         </h1>
 
         <p className="text-base sm:text-lg md:text-xl text-white/90 max-w-2xl mx-auto font-normal leading-relaxed">
-          Stop struggling with ad fatigue and shrinking margins. We engineer high-ROAS Meta & TikTok acquisition, custom retention flows, and offer optimization for ambitious DTC brands doing $30k–$300k+/month.
+          Stop struggling with ad fatigue and shrinking margins. We engineer high-ROAS Meta & TikTok acquisition, custom retention flows, and offer optimization for ambitious DTC brands doing 30k–300k+/month.
         </p>
 
         <div className="pt-6 flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -258,7 +255,7 @@ const DtcMetrics = () => {
       <div className="max-w-6xl mx-auto bg-black/30 backdrop-blur-xl border border-white/15 rounded-3xl p-8 md:p-12 shadow-2xl">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 divide-y sm:divide-y-0 sm:divide-x divide-white/10">
           <div className="pt-4 sm:pt-0">
-            <div className="text-3xl sm:text-4xl font-black text-white">$4.8x</div>
+            <div className="text-3xl sm:text-4xl font-black text-white">4.8x</div>
             <div className="text-xs sm:text-sm text-white/70 mt-1">Average Blended ROAS</div>
           </div>
           <div className="pt-4 sm:pt-0 sm:pl-8">
@@ -270,7 +267,7 @@ const DtcMetrics = () => {
             <div className="text-xs sm:text-sm text-white/70 mt-1">Repeat Purchase Rate</div>
           </div>
           <div className="pt-4 sm:pt-0 sm:pl-8">
-            <div className="text-3xl sm:text-4xl font-black text-white">$15M+</div>
+            <div className="text-3xl sm:text-4xl font-black text-white">15M+</div>
             <div className="text-xs sm:text-sm text-white/70 mt-1">Tracked DTC Tracked Spend</div>
           </div>
         </div>
@@ -323,9 +320,9 @@ export default function DtcPage() {
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
           <div>© {new Date().getFullYear()} Cape Neto Solutions Inc. All rights reserved.</div>
           <div className="flex gap-6">
-            <a href="/" className="hover:text-white transition">Home</a>
-            <a href="/#about" className="hover:text-white transition">About Us</a>
-            <a href="/#case-studies" className="hover:text-white transition">Case Studies</a>
+            <Link href="/" className="hover:text-white transition">Home</Link>
+            <Link href="/#about" className="hover:text-white transition">About Us</Link>
+            <Link href="/#case-studies" className="hover:text-white transition">Case Studies</Link>
           </div>
         </div>
       </footer>

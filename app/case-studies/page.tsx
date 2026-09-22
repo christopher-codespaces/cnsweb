@@ -4,14 +4,11 @@ import React, { useState, useEffect } from 'react';
 import { 
   ArrowUpRight, 
   Play, 
-  TrendingUp, 
   CheckCircle2, 
   Sparkles, 
-  Award, 
-  BarChart3, 
-  ShieldCheck 
 } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const TYPEFORM_URL = "https://yourtypeformlink.typeform.com/to/yourformid";
 
@@ -59,7 +56,7 @@ const Navbar = ({ onBookCall }: { onBookCall: () => void }) => {
       scrolled ? 'bg-black/50 backdrop-blur-md py-4 shadow-xl border-b border-white/10' : 'bg-transparent py-6'
     }`}>
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
-        <a href="/" className="flex items-center gap-3 group">
+        <Link href="/" className="flex items-center gap-3 group">
           <div className="w-10 h-10 rounded-xl bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white shadow-inner overflow-hidden p-2 group-hover:border-white/40 transition">
             <Image 
               src="/v3.png" 
@@ -72,7 +69,7 @@ const Navbar = ({ onBookCall }: { onBookCall: () => void }) => {
           <span className="font-bold text-xl tracking-tight text-white flex items-center gap-1">
             Cape Neto<span className="opacity-80 font-normal">Solutions</span>
           </span>
-        </a>
+        </Link>
 
         <nav className="hidden md:flex items-center gap-8 bg-black/20 backdrop-blur-md px-6 py-2 rounded-full border border-white/10">
           {navLinks.map((link) => (
@@ -152,25 +149,25 @@ const CaseStudiesHero = () => {
         </h1>
 
         <p className="text-base sm:text-lg md:text-xl text-white/90 max-w-2xl mx-auto font-normal leading-relaxed">
-          These case studies come from our lead generation and growth operating systems. We generated over R2M+ in direct revenue across creators, platforms, and institutions.
+          These case studies come from our lead generation and growth operating systems. We generated over 2M+ in direct revenue across creators, platforms, and institutions.
         </p>
 
         {/* Top Summary Bar */}
         <div className="pt-6 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
           <div className="bg-black/30 backdrop-blur-md border border-white/15 rounded-2xl p-4 text-center">
-            <div className="text-2xl md:text-3xl font-black text-white">R2M+</div>
+            <div className="text-2xl md:text-3xl font-black text-white">2M+</div>
             <div className="text-[11px] text-white/70 uppercase tracking-wider font-semibold mt-0.5">Attributable Revenue</div>
           </div>
           <div className="bg-black/30 backdrop-blur-md border border-white/15 rounded-2xl p-4 text-center">
-            <div className="text-2xl md:text-3xl font-black text-white">R60k/m</div>
+            <div className="text-2xl md:text-3xl font-black text-white">60k/m</div>
             <div className="text-[11px] text-white/70 uppercase tracking-wider font-semibold mt-0.5">Mollen (Infinite Faith)</div>
           </div>
           <div className="bg-black/30 backdrop-blur-md border border-white/15 rounded-2xl p-4 text-center">
-            <div className="text-2xl md:text-3xl font-black text-white">R20k+/m</div>
+            <div className="text-2xl md:text-3xl font-black text-white">20k+/m</div>
             <div className="text-[11px] text-white/70 uppercase tracking-wider font-semibold mt-0.5">Amiri Elkurdi</div>
           </div>
           <div className="bg-black/30 backdrop-blur-md border border-white/15 rounded-2xl p-4 text-center">
-            <div className="text-2xl md:text-3xl font-black text-white">+R50k</div>
+            <div className="text-2xl md:text-3xl font-black text-white">+50k</div>
             <div className="text-[11px] text-white/70 uppercase tracking-wider font-semibold mt-0.5">Platinum College</div>
           </div>
         </div>
@@ -184,26 +181,26 @@ const CreatorBreakdowns = () => {
   const creators = [
     {
       name: "Mollen (INFINITEFAITHGLOBAL)",
-      metric: "R60,000 / Month",
+      metric: "60,000 / Month",
       handle: "@infinitefaithglobal",
       socials: "10K IG • 25K TikTok",
-      description: "Scaled content monetization and offer infrastructure, taking revenue up to R60k per month consistently.",
+      description: "Scaled content monetization and offer infrastructure, taking revenue up to 60k per month consistently.",
       image: "/mollen.jpg" // Add your image path or placeholder
     },
     {
       name: "Amiri Elkurdi",
-      metric: "R20,000+ / Month",
+      metric: "20,000+ / Month",
       handle: "@amirielkurdi",
-      socials: "2K IG • 4K TikTok • R53,190 Shopify Run",
-      description: "Engineered high-converting e-commerce email flows and ad conversion funnels generating regular R20k+ monthly runs.",
+      socials: "2K IG • 4K TikTok • 53,190 Shopify Run",
+      description: "Engineered high-converting e-commerce email flows and ad conversion funnels generating regular 20k+ monthly runs.",
       image: "/amiri.jpg"
     },
     {
       name: "Platinum College",
-      metric: "+R50,000 Extra Revenue",
+      metric: "+50,000 Extra Revenue",
       handle: "platinumcollege.co.za",
       socials: "Educational Institution",
-      description: "Deployed lead generation acquisition systems that drove over R50,000 in additional student enrollments.",
+      description: "Deployed lead generation acquisition systems that drove over 50,000 in additional student enrollments.",
       image: "/platinum.jpg"
     }
   ];
@@ -255,7 +252,7 @@ const CreatorBreakdowns = () => {
 const VideoProofSection = () => {
   const videoCards = [
     {
-      title: "Over R2M Generated (Lead Gen Era)",
+      title: "Over 2M Generated (Lead Gen Era)",
       desc: "Video proof from our lead generation phase — the work that shaped how we now build creator growth infrastructure.",
     },
     {
@@ -391,7 +388,7 @@ export default function CaseStudiesPage() {
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
           <div>© {new Date().getFullYear()} Cape Neto Solutions Inc. All rights reserved.</div>
           <div className="flex gap-6">
-            <a href="/" className="hover:text-white transition">Home</a>
+            <Link href="/" className="hover:text-white transition">Home</Link>
             <a href="/about" className="hover:text-white transition">About Us</a>
             <a href="/dtc" className="hover:text-white transition">DTC</a>
           </div>

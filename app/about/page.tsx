@@ -4,15 +4,13 @@ import React, { useState, useEffect } from 'react';
 import { 
   ArrowUpRight, 
   Target, 
-  ShieldCheck, 
-  Zap, 
-  TrendingUp, 
   CheckCircle2,
   Sparkles,
   Layers,
   Activity
 } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const TYPEFORM_URL = "https://yourtypeformlink.typeform.com/to/yourformid";
 
@@ -60,7 +58,7 @@ const Navbar = ({ onBookCall }: { onBookCall: () => void }) => {
       scrolled ? 'bg-black/50 backdrop-blur-md py-4 shadow-xl border-b border-white/10' : 'bg-transparent py-6'
     }`}>
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
-        <a href="/" className="flex items-center gap-3 group">
+        <Link href="/" className="flex items-center gap-3 group">
           <div className="w-10 h-10 rounded-xl bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white shadow-inner overflow-hidden p-2 group-hover:border-white/40 transition">
             <Image 
               src="/v3.png" 
@@ -73,7 +71,7 @@ const Navbar = ({ onBookCall }: { onBookCall: () => void }) => {
           <span className="font-bold text-xl tracking-tight text-white flex items-center gap-1">
             Cape Neto<span className="opacity-80 font-normal">Solutions</span>
           </span>
-        </a>
+        </Link>
 
         <nav className="hidden md:flex items-center gap-8 bg-black/20 backdrop-blur-md px-6 py-2 rounded-full border border-white/10">
           {navLinks.map((link) => (
@@ -149,12 +147,12 @@ const AboutHero = () => {
         </div>
 
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-[1.15] text-white">
-          We Didn't Start as a "Growth Partner." <br className="hidden sm:inline" />
+          We Didn&apos;t Start as a &quot;Growth Partner.&quot; <br className="hidden sm:inline" />
           <span className="underline decoration-white/30 decoration-wavy underline-offset-8">We Built It The Hard Way.</span>
         </h1>
 
         <p className="text-base sm:text-lg md:text-xl text-white/90 max-w-3xl mx-auto font-normal leading-relaxed">
-          Cape Neto Solutions started in pure lead generation—building paid acquisition campaigns from scratch and generating over R2M+ in trackable client revenue.
+          Cape Neto Solutions started in pure lead generation—building paid acquisition campaigns from scratch and generating over 2M+ in trackable client revenue.
         </p>
       </div>
     </section>
@@ -182,10 +180,10 @@ const OriginStory = () => {
 
           <div className="text-sm md:text-base text-white/80 space-y-4 leading-relaxed font-normal">
             <p>
-              When we started out, we focused strictly on paid acquisition. It worked—our funnels drove hundreds of qualified leads and generated over R2M+ for our partners. But as campaigns scaled, we noticed a trend that most agencies ignore:
+              When we started out, we focused strictly on paid acquisition. It worked—our funnels drove hundreds of qualified leads and generated over 2M+ for our partners. But as campaigns scaled, we noticed a trend that most agencies ignore:
             </p>
             <p className="p-4 bg-black/40 rounded-2xl border border-white/10 font-medium text-white italic">
-              "When follow-up is messy, onboarding is weak, offers are unclear, or retention is ignored... even great traffic collapses into wasted spend."
+              &quot;When follow-up is messy, onboarding is weak, offers are unclear, or retention is ignored... even great traffic collapses into wasted spend.&quot;
             </p>
             <p>
               Generating leads showed us what works—and more importantly, exposed where businesses break down when trying to scale up.
@@ -202,7 +200,7 @@ const OriginStory = () => {
               </div>
               <h3 className="text-xl font-bold text-white">From Task-Doers To Growth Operators</h3>
               <p className="text-xs sm:text-sm text-white/80 leading-relaxed">
-                We stopped being an agency that just "runs ads." Instead, we build the actual infrastructure that keeps businesses profitable—fixing offers, funnels, sales processes, and customer retention.
+                We stopped being an agency that just &quot;runs ads.&quot; Instead, we build the actual infrastructure that keeps businesses profitable—fixing offers, funnels, sales processes, and customer retention.
               </p>
             </div>
           </div>
@@ -228,7 +226,7 @@ const OriginStory = () => {
 /* Principles / Rules */
 const Principles = () => {
   const rules = [
-    { title: "R2M+ Proven Base", desc: "Built from real lead gen wins across competitive markets." },
+    { title: "2M+ Proven Base", desc: "Built from real lead gen wins across competitive markets." },
     { title: "Full-Stack Integration", desc: "We fix what happens after the click: sales, onboarding, & LTV." },
     { title: "Zero Fluff Policy", desc: "No vanity metrics. Everything is tied directly to cash collection." },
   ];
@@ -270,7 +268,7 @@ const AboutCta = ({ onApply }: { onApply: () => void }) => {
           </div>
 
           <h2 className="text-3xl sm:text-5xl font-black text-white tracking-tight leading-tight">
-            Let's Build Your Growth System
+            Let&apos;s Build Your Growth System
           </h2>
 
           <p className="text-white/80 text-sm sm:text-base max-w-lg mx-auto">
@@ -313,7 +311,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
           <div>© {new Date().getFullYear()} Cape Neto Solutions Inc. All rights reserved.</div>
           <div className="flex gap-6">
-            <a href="/" className="hover:text-white transition">Home</a>
+            <Link href="/" className="hover:text-white transition">Home</Link>
             <a href="/about" className="hover:text-white transition">About Us</a>
             <a href="/dtc" className="hover:text-white transition">DTC</a>
           </div>
