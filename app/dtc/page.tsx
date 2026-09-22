@@ -267,7 +267,7 @@ const DtcMetrics = () => {
             <div className="text-xs sm:text-sm text-white/70 mt-1">Repeat Purchase Rate</div>
           </div>
           <div className="pt-4 sm:pt-0 sm:pl-8">
-            <div className="text-3xl sm:text-4xl font-black text-white">15M+</div>
+            <div className="text-3xl sm:text-4xl font-black text-white">300K+</div>
             <div className="text-xs sm:text-sm text-white/70 mt-1">Tracked DTC Tracked Spend</div>
           </div>
         </div>
