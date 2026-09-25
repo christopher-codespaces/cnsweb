@@ -19,8 +19,7 @@ import {
 import Image from 'next/image';
 
 // Replace with your actual Typeform URL
-const TYPEFORM_URL = "https://yourtypeformlink.typeform.com/to/yourformid";
-
+const TYPEFORM_URL = "https://opnform.com/forms/application-form-linlsi";
 /* Floating Ambient Background Blobs Component */
 const BackgroundBlobs = () => {
   return (

@@ -10,7 +10,7 @@ import {
 import Image from 'next/image';
 import Link from 'next/link';
 
-const TYPEFORM_URL = "https://yourtypeformlink.typeform.com/to/yourformid";
+const TYPEFORM_URL = "https://opnform.com/forms/application-form-linlsi";
 
 /* Ambient Background Blobs */
 const BackgroundBlobs = () => (
@@ -185,7 +185,7 @@ const CreatorBreakdowns = () => {
       handle: "@infinitefaithglobal",
       socials: "10K IG • 25K TikTok",
       description: "Scaled content monetization and offer infrastructure, taking revenue up to 60k per month consistently.",
-      image: "/mollen.jpg" // Add your image path or placeholder
+      image: "/mollen.png" 
     },
     {
       name: "Amiri Elkurdi",
@@ -193,7 +193,7 @@ const CreatorBreakdowns = () => {
       handle: "@amirielkurdi",
       socials: "2K IG • 4K TikTok • 53,190 Shopify Run",
       description: "Engineered high-converting e-commerce email flows and ad conversion funnels generating regular 20k+ monthly runs.",
-      image: "/amiri.jpg"
+      image: "/amiri.png" 
     },
     {
       name: "Platinum College",
@@ -225,8 +225,21 @@ const CreatorBreakdowns = () => {
                   <div className="text-3xl font-black text-white">{creator.metric}</div>
                 </div>
 
-                <h3 className="text-xl font-bold text-white mb-1">{creator.name}</h3>
-                <div className="text-xs text-white/60 mb-4 font-mono">{creator.socials}</div>
+                {/* Added Image and Name Layout Here */}
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="relative w-14 h-14 rounded-full overflow-hidden border-2 border-white/10 shrink-0 bg-neutral-800">
+                    <Image 
+                      src={creator.image} 
+                      alt={creator.name} 
+                      fill 
+                      className="object-cover"
+                    />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-bold text-white leading-tight">{creator.name}</h3>
+                    <div className="text-xs text-white/60 font-mono mt-1">{creator.socials}</div>
+                  </div>
+                </div>
 
                 <p className="text-sm text-white/80 leading-relaxed font-normal">
                   {creator.description}
@@ -248,24 +261,28 @@ const CreatorBreakdowns = () => {
   );
 };
 
-/* Video Proof Grid Section (From Screenshot Layout) */
+/* Video Proof Grid Section */
 const VideoProofSection = () => {
   const videoCards = [
     {
       title: "Over 2M Generated (Lead Gen Era)",
       desc: "Video proof from our lead generation phase — the work that shaped how we now build creator growth infrastructure.",
+      youtubeUrl: "https://youtu.be/pYsL5rA5PPM?si=XXlxUOq5DA0ZwgqM" 
     },
     {
       title: "Client Results Breakdown (Lead Gen Era)",
       desc: "Video proof from our lead generation phase — the work that shaped how we now build creator revenue systems.",
+      youtubeUrl: "https://youtu.be/pYsL5rA5PPM?si=3X9LIrsjoJCQ7vK4"
     },
     {
       title: "Video Case Study (System Deep Dive)",
       desc: "Detailed walkthrough showing how we scale offer conversion, pipeline flow, and recurring revenue.",
+      youtubeUrl: "https://youtu.be/fDn9CF5eKDQ?si=y_X6TE2BZEZQKS6-"
     },
     {
       title: "Video Case Study (Funnel Execution)",
       desc: "Step-by-step breakdown of paid acquisition, backend community systems, and revenue retention.",
+      youtubeUrl: "https://youtu.be/QhkrlGzLQLA?si=12aVdvwZD7DoqKFD"
     }
   ];
 
@@ -284,8 +301,13 @@ const VideoProofSection = () => {
               className="bg-black/30 backdrop-blur-xl border border-white/15 rounded-3xl p-6 shadow-2xl flex flex-col justify-between"
             >
               <div>
-                {/* Video Container Mockup */}
-                <div className="relative aspect-video w-full bg-neutral-900 rounded-2xl border border-white/10 overflow-hidden flex items-center justify-center group cursor-pointer mb-6">
+                {/* Wrapped the thumbnail container in an <a> tag */}
+                <a 
+                  href={card.youtubeUrl} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="relative aspect-video w-full bg-neutral-900 rounded-2xl border border-white/10 overflow-hidden flex items-center justify-center group cursor-pointer mb-6 block"
+                >
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10" />
                   
                   {/* Play Button Overlay */}
@@ -294,19 +316,25 @@ const VideoProofSection = () => {
                   </div>
 
                   <div className="absolute bottom-4 left-4 z-20 text-xs font-bold text-white/80 bg-black/60 px-3 py-1 rounded-full backdrop-blur-md">
-                    Click to Play Video
+                    Click to Play on YouTube
                   </div>
-                </div>
+                </a>
 
                 <h3 className="text-xl font-bold text-white mb-2">{card.title}</h3>
                 <p className="text-xs sm:text-sm text-white/80 leading-relaxed">{card.desc}</p>
               </div>
 
               <div className="pt-6 mt-6 border-t border-white/10 flex items-center justify-between">
-                <button className="bg-white/10 hover:bg-white/20 text-white font-semibold text-xs px-4 py-2 rounded-xl transition flex items-center gap-2 border border-white/15">
+                {/* Updated the button to be an <a> tag linking to YouTube */}
+                <a 
+                  href={card.youtubeUrl}
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="bg-white/10 hover:bg-white/20 text-white font-semibold text-xs px-4 py-2 rounded-xl transition flex items-center gap-2 border border-white/15"
+                >
                   <span>Watch Video</span>
                   <ArrowUpRight className="w-3.5 h-3.5" />
-                </button>
+                </a>
                 <span className="text-[11px] text-white/50 font-mono">Cape Neto Proof</span>
               </div>
             </div>

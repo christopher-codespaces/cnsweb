@@ -12,8 +12,7 @@ import {
 import Image from 'next/image';
 import Link from 'next/link';
 
-const TYPEFORM_URL = "https://yourtypeformlink.typeform.com/to/yourformid";
-
+const TYPEFORM_URL = "https://opnform.com/forms/application-form-linlsi";
 /* Ambient Background Blobs */
 const BackgroundBlobs = () => (
   <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
